@@ -1,9 +1,8 @@
-CREATE TABLE "Series" (
-	"id"	INTEGER,
-	"title"	TEXT,
-	"author_id"	INTEGER,
-	"subgenre_id"	INTEGER,
-	PRIMARY KEY("id")
+CREATE TABLE series (
+	id INTEGER PRIMARY KEY,
+	title	TEXT,
+	author_id	INTEGER,
+	subgenre_id	INTEGER
 );
 
 CREATE TABLE "SubGenres" (
@@ -35,7 +34,7 @@ CREATE TABLE "Characters" (
 	PRIMARY KEY("id")
 );
 
-REATE TABLE "character_books" (
+CREATE TABLE "character_books" (
 	"id"	INTEGER,
 	"book_id"	INTEGER,
 	"character_id"	INTEGER,
