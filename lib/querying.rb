@@ -1,3 +1,4 @@
+require 'pry'
 def select_books_titles_and_years_in_first_series_order_by_year
   "SELECT books.title, books.year 
    FROM books
@@ -39,8 +40,8 @@ def select_series_title_with_most_human_characters
    ON books.id = book_id
    JOIN characters
    ON characters.id = character_books.character_id
-   GROUP BY characters.species
-   HAVING characters.species = 'Human'
+   WHERE characters.species = 'human'
+   GROUP BY series.title
    ORDER BY COUNT(characters.species) DESC LIMIT 1;
    "
 end
